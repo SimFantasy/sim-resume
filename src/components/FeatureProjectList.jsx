@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import { RiArrowDropRightLine } from 'react-icons/ri'
 import { FeatureProjectItem, Titlebar } from '@/components'
+import { featureProjectLimit } from '@/constants/settings'
 
 const FeatureProjectList = ({ data }) => {
   return (
     <div className='flex flex-col gap-10 mt-10 pb-10 border-b border-gray-300 dark:border-gray-700'>
       <Titlebar title='项目经历' />
       <div className='grid grid-cols-2 md:grid-cols-3 gap-6'>
-        {data?.map(project => (
+        {data?.slice(0, featureProjectLimit).map(project => (
           <FeatureProjectItem key={project.id} {...project} />
         ))}
       </div>
