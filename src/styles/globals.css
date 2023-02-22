@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-black dark:bg-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto w-[90vw] md:w-[90vw] lg:w-[72vw] xl:w-[64vw];
+  }
+  .content-area {
+    @apply h-full py-20;
+    min-height: calc(100vh - theme(spacing.14) * 2);
+  }
+}
