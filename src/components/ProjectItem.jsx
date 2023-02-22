@@ -50,13 +50,15 @@ const ProjectItem = ({
             <RiUserLine size={16} />
             {role}
           </div>
-          <div
-            className='flex justify-start items-center gap-2 h-full'
-            title='项目时长'
-          >
-            <RiCalendarTodoLine size={16} />
-            {time}
-          </div>
+          {time && (
+            <div
+              className='flex justify-start items-center gap-2 h-full'
+              title='项目时长'
+            >
+              <RiCalendarTodoLine size={16} />
+              {time}
+            </div>
+          )}
           {link && (
             <div
               className='flex justify-start items-center gap-2 h-full'
